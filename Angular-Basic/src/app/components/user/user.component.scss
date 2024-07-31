@@ -1,0 +1,39 @@
+
+.example-card {
+    margin: 50px;
+    max-width: 400px;
+    box-shadow: 0 0 7px black;
+}
+  
+.example-header-image {
+    background-size: cover;
+}
+mat-card-actions {
+    div.actions{
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;  
+    }
+}
+.like {
+    padding: 10px 10px ;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    background-color: rgb(98, 71, 194);
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.share {
+    padding: 10px 10px ;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    background-color: rgb(223, 106, 197);
+    font-size: 16px;
+    font-weight: 400;
+
+}
