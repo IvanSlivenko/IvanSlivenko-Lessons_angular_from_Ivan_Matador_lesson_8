@@ -1,10 +1,56 @@
-<mat-card appearance="outlined">
-    <mat-card-header>
-      <mat-card-title> Actions Buttons</mat-card-title>
-      <mat-card-subtitle>Start</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">LIKE</button>
-      <button mat-raised-button color="warn">SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<mat-grid-list cols="2" rowHeight="100%">
+
+  <mat-grid-tile>
+    <mat-card appearance="outlined">
+      <form #form = "ngForm" (ngSubmit)="sendForm(form)">
+        <mat-card-header>
+          <mat-card-title> Template driving forms</mat-card-title>
+          <mat-card-subtitle>{{ form.value.text }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content> 
+          <mat-form-field>
+            <mat-label>Enter text</mat-label>
+            <input type="text" matInput [(ngModel)]="form.value.text" [ngModelOptions]="{standalone: true}" required> 
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Enter name</mat-label>
+            <input type="text" matInput [(ngModel)]="form.value.name" [ngModelOptions]="{standalone: true}" disabled> 
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" type="reset">Cancel</button>
+          <button mat-raised-button color="warn" type="submit">Submit</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card appearance="outlined" [formGroup]="form2">
+      <mat-card-header>
+        <mat-card-title> Reactive forms</mat-card-title>
+        <mat-card-subtitle>{{ 'string' }}</mat-card-subtitle>
+      </mat-card-header>
+      
+        <mat-form-field>
+          <mat-label>Enter text</mat-label>
+          <input type="text" matInput [(ngModel)]="form.value.text" [ngModelOptions]="{standalone: true}" required> 
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Enter name</mat-label>
+          <input type="text" matInput [(ngModel)]="form.value.name" [ngModelOptions]="{standalone: true}" disabled> 
+        </mat-form-field>
+
+      <mat-card-actions>
+        <button mat-raised-button color="accent" type="reset">Cancel</button>
+        <button mat-raised-button color="warn" type="Submit">Submit</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
+  

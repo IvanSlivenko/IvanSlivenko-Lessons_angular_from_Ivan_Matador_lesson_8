@@ -182,6 +182,8 @@ ng g s servises/users
 ------------------------------------------------------ Part 6 angular material
 https://youtu.be/2LQrFOziNKo
 
+https://material.angular.io/
+
 ng add @angular/material
 
 in package.json :
@@ -194,8 +196,22 @@ https://youtu.be/Ohp6njf0Ajo
 
 
 ---------------------------------------------------- Part 8 forms
+https://material.angular.io/
+
+card
+
+button
+
+grid list
 
 https://youtu.be/SCVSDWDxL9g
 
+
+
+<mat-form-field>
+            <mat-label>Enter text</mat-label>
+            <input type="text" matInput [(ngModel)]="form.value.text" [ngModelOptions]="{standalone: true}"> 
+</mat-form-field>
+
 ng g c components/test-forms --skip-tests
-13 : 59
+37 : 37

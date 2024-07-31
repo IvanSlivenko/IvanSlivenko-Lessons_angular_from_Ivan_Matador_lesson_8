@@ -1,0 +1,14 @@
+mat-grid-tile {
+    mat-card{
+        margin: 10px;
+        width: calc(100% - 20px );
+        height: calc(100% - 20px);
+        display: flex;
+        justify-content: space-between;
+    }
+    mat-card-actions{
+        
+        justify-content: space-between;
+    }
+}
+
